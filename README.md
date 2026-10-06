@@ -11,7 +11,6 @@ prints. Totals add themselves up. Built by Ian Gong (Gong Realty) and free to ad
 ## What's inside
 - **index.html** — the condo offer checklist (landing page)
 - **step-1.html** — the fillable Submit Offer Form (the star: live preview on the real PDF)
-- **ian-gong-preferred-lenders.pdf** — example lender list
 - **favicon.svg**
 
 ## Run it locally
@@ -33,7 +32,7 @@ This repo ships with Gong Realty's details as a working example. Replace them wi
 2. **Phone** — search for `914-331-8881` and `9143318881`
 3. **Name & brokerage** — search for `Ian Gong`, `Gong Realty`, `Lizhi Gong`, `Casa Blanca`
 4. **License numbers** in the footer
-5. **Preferred lenders** — the lender cards in `index.html` and `ian-gong-preferred-lenders.pdf` (don't republish other people's contact info without permission)
+5. **Preferred lenders** — `index.html` ships with clearly-marked **placeholder** lender cards (highlighted in amber). Swap in your own lenders, or delete the whole lender section.
 6. **Brand colors** — the CSS `:root` variables at the top of each file
 
 
