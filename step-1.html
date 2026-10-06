@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Submit Offer Form &amp; Financial Statement | Gong Realty</title>
+<title>Submit Offer Form &amp; Financial Statement | Your Brokerage</title>
 <meta name="description" content="Fill out the condo Submit Offer Form and financial statement. Live preview, automatic totals, and a print-ready PDF. Everything stays on your device." />
 <meta name="robots" content="noindex" />
 <link rel="icon" href="favicon.svg" type="image/svg+xml" />
@@ -129,7 +129,7 @@ button,input,select,textarea{font:inherit;color:inherit}
 <body>
 
 <div class="bar">
-  <a class="brand" href="index.html">Gong&nbsp;Realty <small>Submit Offer Form</small></a>
+  <a class="brand" href="index.html">Your&nbsp;Brokerage <small>Submit Offer Form</small></a>
   <span class="status"><i></i>Saved on this device</span>
   <button class="btn" id="btnSave" type="button" title="Download a file you can reopen later">Save a copy</button>
   <button class="btn" id="btnOpen" type="button" title="Reopen a saved copy">Open saved</button>
@@ -177,7 +177,7 @@ const usdBlank = n => n ? usd(n) : "";
 
 const todayLocal = () => { const d=new Date(); return d.getFullYear()+"-"+String(d.getMonth()+1).padStart(2,"0")+"-"+String(d.getDate()).padStart(2,"0"); };
 const BLANK = () => ({
-  deal:{date:"",listAgent:"",sellAgent:"Ian Gong",property:"",apt:"",asking:""},
+  deal:{date:"",listAgent:"",sellAgent:"Your Name",property:"",apt:"",asking:""},
   hasB2:false,
   b1:buyer(), b2:buyer(),
   offer:{price:"",finance:"",financeOther:"",cashDown:"",downSource:"",
@@ -512,7 +512,7 @@ function saveCopy(){ const blob=new Blob([JSON.stringify(S,null,2)],{type:"appli
 function openCopy(file){ const r=new FileReader(); r.onload=()=>{ try{ S=Object.assign(BLANK(),JSON.parse(r.result)); persist(); build(); renderPreview(); toast("Opened"); }catch(e){ toast("That file didn’t open"); } }; r.readAsText(file); }
 
 const EXAMPLE = ()=>{ const s=BLANK();
-  s.deal={date:"2026-05-23",listAgent:"Eric Rivera",sellAgent:"Ian Gong",property:"58-01 Queens Blvd",apt:"3M",asking:"664000"};
+  s.deal={date:"2026-05-23",listAgent:"Eric Rivera",sellAgent:"Your Name",property:"58-01 Queens Blvd",apt:"3M",asking:"664000"};
   s.hasB2=true;
   s.b1=Object.assign(buyer(),{name:"1593403 Ontario Limited",address:"700-7050 Weston Rd, Woodbridge, ON, Canada",housing:"own",howLong:"10 years",employer:"1593403 Ontario Limited",position:"Owner",hireDate:"2003",salary:"250000",bonus:"",other:"100000",schedC:"84900",aCash:"350000",aLiquid:"500000",aStocks:"50000",aRetire:"",aRealEstate:"4000000",aOther:"",lMortgage:"1450000",lInstall:"",lPayable:"",lCredit:"",lTaxes:"",lOther:""});
   s.b2=Object.assign(buyer(),{name:"Samantha Santoro",address:"90-02 Queens Blvd, Apt 425, Elmhurst, NY",housing:"rent",howLong:"2 years",employer:"Center for Family Representation",position:"President",hireDate:"Sep 2026",salary:"84900",bonus:"",other:"",schedC:"",aCash:"150000",aLiquid:"",aStocks:"",aRetire:"",aRealEstate:"",aOther:"",lMortgage:"",lInstall:"",lPayable:"",lCredit:"",lTaxes:"",lOther:""});
